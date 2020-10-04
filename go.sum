@@ -10,6 +10,8 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/wojnosystems/go-optional v1.3.0 h1:2zHY5/IzjMAvCjFoBVy1Hq4m6LlyGADjtvIpOTUPG10=
 github.com/wojnosystems/go-optional v1.3.0/go.mod h1:Ryu1VdhTzgkURi1WATQ28FcYVLVAnVtIZKo124B0yAE=
+github.com/wojnosystems/go-optional v1.4.0 h1:puewD7vpP0KZWtXklm/3I8o8oU3p4jLxFBLQxpH3Cac=
+github.com/wojnosystems/go-optional v1.4.0/go.mod h1:Ryu1VdhTzgkURi1WATQ28FcYVLVAnVtIZKo124B0yAE=
 github.com/wojnosystems/go-parse-register v1.0.0 h1:oYGrMY/POYdWENIt3OYR7uthzJ/Es82kr5ctMYWOUCI=
 github.com/wojnosystems/go-parse-register v1.0.0/go.mod h1:Zo4KDblfQiPjM9uWR0YyNLEx22gnpSyBwkAtHzx56E0=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=

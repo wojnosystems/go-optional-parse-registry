@@ -6,7 +6,10 @@ import (
 	"github.com/wojnosystems/go-parse-register"
 	"reflect"
 	"strconv"
+	"time"
 )
+
+const defaultTimeParsingLayout = time.RFC3339
 
 // Register the optional types
 func Register(r *parse_register.Registry) *parse_register.Registry {
@@ -144,6 +147,22 @@ func Register(r *parse_register.Registry) *parse_register.Registry {
 			return
 		}
 		return errors.New("unable to convert string to boolean value")
+	})
+	r.Register(reflect.TypeOf((*optional.Time)(nil)).Elem(), func(settableDst interface{}, src string) (err error) {
+		t, err := time.Parse(defaultTimeParsingLayout, src)
+		if err != nil {
+			return
+		}
+		settableDst.(*optional.Time).Set(t)
+		return
+	})
+	r.Register(reflect.TypeOf((*optional.Duration)(nil)).Elem(), func(settableDst interface{}, src string) (err error) {
+		d, err := time.ParseDuration(src)
+		if err != nil {
+			return
+		}
+		settableDst.(*optional.Duration).Set(d)
+		return
 	})
 	return r
 }
