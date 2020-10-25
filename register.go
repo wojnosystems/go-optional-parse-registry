@@ -18,7 +18,7 @@ func NewWithGoPrimitives() parse_register.RegisterSetter {
 }
 
 // Register the optional types
-func RegisterFluent(r parse_register.Registerer) parse_register.Registerer {
+func RegisterFluent(r parse_register.RegisterSetter) parse_register.RegisterSetter {
 	r.Register(reflect.TypeOf((*optional.String)(nil)).Elem(), func(settableDst interface{}, src string) (err error) {
 		s := settableDst.(*optional.String)
 		s.Set(src)
