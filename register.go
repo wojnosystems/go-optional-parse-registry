@@ -11,8 +11,14 @@ import (
 
 const defaultTimeParsingLayout = time.RFC3339
 
+func NewWithGoPrimitives() parse_register.RegisterSetter {
+	r := parse_register.GoPrimitives()
+	RegisterFluent(r)
+	return r
+}
+
 // Register the optional types
-func Register(r *parse_register.Registry) *parse_register.Registry {
+func RegisterFluent(r parse_register.Registerer) parse_register.Registerer {
 	r.Register(reflect.TypeOf((*optional.String)(nil)).Elem(), func(settableDst interface{}, src string) (err error) {
 		s := settableDst.(*optional.String)
 		s.Set(src)
